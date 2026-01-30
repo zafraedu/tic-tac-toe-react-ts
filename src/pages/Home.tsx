@@ -1,18 +1,15 @@
+import { Button } from "../components/ui/Button";
+import { Header } from "../components/ui/Header";
+
 export const Home = () => {
-  return (
-    <div className="h-screen w-full flex flex-col justify-between overflow-hidden px-4">
-      {/* Header arriba */}
-      <header className="text-center pt-8">
-        <h1 className="text-3xl font-bold">Tic Tac Toe</h1>
-      </header>
-
-      {/* Botones centrados */}
-      <section className="flex flex-col items-center justify-center gap-4">
-        <button className="px-6 py-3 bg-blue-500 text-white rounded">Jugar</button>
-        <button className="px-6 py-3 bg-green-500 text-white rounded">Opciones</button>
-      </section>
-
-      <div></div>
-    </div>
-  );
+	return (
+		<div className="h-screen w-full flex flex-col justify-center overflow-hidden px-10">
+			<Header />
+			<section className="flex flex-col items-center justify-center gap-5">
+				<Button to="/ChooseGameMode" variant="blue">PLAY</Button>
+				{/* <Button to="/Settings" variant="orange">SETTINGS</Button> */}
+			</section>
+			<span></span>
+		</div>
+	);
 };
